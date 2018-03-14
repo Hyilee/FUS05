@@ -10,6 +10,7 @@ body{
     justify-content: space-between;
     align-content: space-between;
     margin: 0 auto;
+    padding: 10px 15px;
     width: 850px;
     border: 1px solid black;
 }
@@ -20,7 +21,7 @@ body{
     background-color:pink;
 }
 .box{
-    margin-bottom: 15px;
+    margin: 10px 0 8px;
     width: 200px;
     height: 150px;
 }
