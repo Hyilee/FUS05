@@ -64,39 +64,60 @@ body{
         width:35%;
         margin-left: 1.5em;
     }
-}
     /* 모바일  스몰 menu*/
     .btn-wrapper{
         background: aqua;
         position:fixed;
         top:0.5em;
         right:1em;
-        width:30px;
-        height:30px;
+        width:40px;
+        height:40px;
+        overflow: hidden;
     }
     .btn-menubar{
+        cursor: pointer;
         display: none;
+        border: 0;
+        background: transparent;
+        padding: 0;
+        color:rgba(0,0,0,.85);
+
     }
+
     .menubar{
+        cursor: pointer;
         position: absolute;
         left:0;
         background: #181818;
         border-radius:10px;
         width:100%;
         height:25%;
+        transition: all 200ms;
     }
     .menubar-top{
         top:0;
+    }
+    .menubar-act.menubar-top{
+        top:50%;
+        transform: translateY(-50%) rotate(45deg);
+        
     }
     .menubar-middle{
         top:50%;
         transform: translateY(-50%);
     }
+    .menubar-act.menubar-middle{
+        top:50%;
+        transform: translate(-100%, -50%);
+    }
     .menubar-bottom{
         top:100%;
         transform: translateY(-100%);
     }
-
+    .menubar-act.menubar-bottom{
+        top:50%;
+        transform: translateY(-50%) rotate(-45deg);
+    }
     .menu{
         background: rgba(0,0,0,.85);
         position: fixed;
@@ -108,11 +129,11 @@ body{
         color:#fff; 
         padding:3em 0 0 2em;
         transform: translateX(-100%);
+        transition: all 0.5s;
     }
     .menu-act{
         transform: translateX(0);
     }
-
 }
 /* 모바일 디바이스 */
 @media screen and (min-width: 551px) and (max-width: 999px){
@@ -122,6 +143,9 @@ body{
         margin:0 auto;
     }
     /*모바일매뉴*/
+    .btn-wrapper{
+        display: none;
+    }
     .menu{
         display: flex;
         justify-content: space-around;
@@ -131,7 +155,6 @@ body{
         padding: 1em;
         text-transform: uppercase;
     }
-
 }
 /* 데스크탑 디바이스 */
 @media screen and (min-width: 1000px){
@@ -154,6 +177,10 @@ body{
     }
 
     /*데스크탑 메뉴*/
+    
+    .btn-wrapper{
+        display: none;
+    }
     .menu{
         grid-area: menu;
         display: flex;
