@@ -1,0 +1,11 @@
+.bg-light{
+    background: silver!important;
+}
+/* .row .col:nth-child(odd) .card{
+    background: pink;
+ } */
+
+.card{
+    width: 80%;
+    margin: 0 auto;
+}
