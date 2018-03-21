@@ -1,0 +1,35 @@
+@charset "utf-8";
+*, *::before, *::after{
+    box-sizing: border-box;
+    margin:0;
+    padding:0;
+    list-style-type:none;
+    font: inherit;
+}
+.heading{
+    font-size: 3em;
+}
+.note{
+    background: yellow;
+    width: 800px;
+}    
+.note img{
+    width:200px;
+    height:auto;
+    float:right;
+    position: relative;
+    right: -50px;
+}
+/*초중요*/
+.clearfix::after{
+    content:"";
+    clear:both;
+    display:block;
+}
+.next{
+    background: violet;
+    margin-top:50px;
+}
+.next img{
+    float:left;
+}
